@@ -2,7 +2,6 @@
 export ZSH=$HOME/.zsh
 
 ### ---- history config -------------------------------------
-export HISTFILE=$ZSH/.zsh_history
 
 # How many commands zsh will load to memory.
 export HISTSIZE=10000
