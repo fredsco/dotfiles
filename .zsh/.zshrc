@@ -15,6 +15,7 @@ setopt HIST_IGNORE_ALL_DUPS
 # History won't show duplicates on search.
 setopt HIST_FIND_NO_DUPS
 
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 ### ---- PLUGINS & THEMES -----------------------------------
 source $ZSH/themes/agnoster-zsh-theme/agnoster.zsh-theme
@@ -42,4 +43,5 @@ export PATH=$PATH:~/Library/Android/sdk/platform-tools
 export ANDROID_HOME=~/Library/Android/sdk
 export PATH="$HOME/.bin:$PATH"
 export PATH="~/Library/Android/sdk/platform-tools":$PATH
+
 
