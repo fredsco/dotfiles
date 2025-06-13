@@ -43,6 +43,3 @@ export ANDROID_HOME=~/Library/Android/sdk
 export PATH="$HOME/.bin:$PATH"
 export PATH="~/Library/Android/sdk/platform-tools":$PATH
 
-# Pico
-export PICO_SDK_PATH=$HOME/pico/sdk/2.1.1
-export PICO_EXTRAS_PATH=$HOME/pico/pico-extras
