@@ -18,30 +18,13 @@ setopt HIST_FIND_NO_DUPS
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 ### ---- PLUGINS & THEMES -----------------------------------
-source $ZSH/themes/agnoster-zsh-theme/agnoster.zsh-theme
-source $HOMEBREW_PREFIX/opt/zsh-fast-syntax-highlighting/share/zsh-fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
-source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-if type brew &>/dev/null; then
-  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
-    autoload -Uz compinit
-    compinit
-fi
 
-#Enables parameter expansion in the prompt otherwise git info is not displayed
-setopt prompt_subst
+
 
 ### ---- ALIASES -----------------------------------
 alias ls='ls --color'
 
 
 ### ----  -----------------------------------
-# Added by LM Studio CLI (lms)
-export PATH="$PATH:$HOME/.lmstudio/bin"
-
-# Android
-export PATH=$PATH:~/Library/Android/sdk/platform-tools
-export ANDROID_HOME=~/Library/Android/sdk
-export PATH="$HOME/.bin:$PATH"
-export PATH="~/Library/Android/sdk/platform-tools":$PATH
 
 
