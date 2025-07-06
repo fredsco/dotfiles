@@ -15,7 +15,6 @@ setopt HIST_IGNORE_ALL_DUPS
 # History won't show duplicates on search.
 setopt HIST_FIND_NO_DUPS
 
-eval "$(/opt/homebrew/bin/brew shellenv)"
 
 ### ---- PLUGINS & THEMES -----------------------------------
 
