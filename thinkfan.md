@@ -72,12 +72,13 @@ hwmon /sys/devices/platform/thinkpad_hwmon/hwmon/hwmon4/temp1_input
 
 (0, 0,  50)
 (1, 50, 55)
-(2, 50, 60)
+(2, 55, 60)
 (3, 60, 65)
 (4, 65, 70)
 (5, 70, 75)
 (6, 75, 80)
 (7, 80, 32767)
+
 
 ```
 
