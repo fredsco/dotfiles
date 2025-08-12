@@ -20,7 +20,7 @@ setopt SHARE_HISTORY             # Share history between all sessions.
 # END HISTORY
 # -------
 
-export EDITOR='nvim'
+export EDITOR='vim'
 
 # -------
 # ZSH PROMPT
