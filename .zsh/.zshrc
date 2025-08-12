@@ -47,7 +47,9 @@ alias o="open ."
 # -------
 # 
 # -------
-source $HOMEBREW_PREFIX/opt/zsh-fast-syntax-highlighting/share/zsh-fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+source  ~/.zsh-plugins/fsh/fast-syntax-highlighting.plugin.zsh
+
+
 
 # -------
 # 
