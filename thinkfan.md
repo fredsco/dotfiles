@@ -98,6 +98,6 @@ thinkfan -n
 ```
 sudo systemctl enable thinkfan.service thinkfan-sleep.service thinkfan-wakeup.service
 ```
-IMPORTANT: don't forget to change biasing factor otherwise fans switch pretty often. E.g `sudo thinkfan -b -10 -v -n -c /etc/thinkfan.conf`
+IMPORTANT: don't forget to change biasing factor otherwise fans switch pretty often. E.g `sudo thinkfan -b -10 -v -c /etc/thinkfan.conf`
 
-i.e: in `/etc/default/thinkfan` add `THINKFAN_ARGS="-b -10 -v -n -c /etc/thinkfan.conf"`
+i.e: in `/etc/default/thinkfan` add `THINKFAN_ARGS="-b -10 -v -c /etc/thinkfan.conf"`
