@@ -1,7 +1,3 @@
-Perfect 👍 you’re steadily building this into a solid reference. Let’s integrate your **extra notes** into the same structured style so it stays clean and organized.
-
----
-
 # VIM Quick Notes
 
 ### Mental Model
