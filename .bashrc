@@ -45,3 +45,6 @@ export PS1="\n\t \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
 # Exports
 export PICO_SDK_PATH=~/pico/pico-sdk
 export PICO_EXTRAS_PATH=~/pico/pico-extras
+
+# Created by `pipx` on 2025-08-23 20:59:10
+export PATH="$PATH:/home/frederik/.local/bin"
