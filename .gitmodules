@@ -1,0 +1,6 @@
+[submodule "vim/pack/my-plugins/start/nerdtree"]
+	path = vim/pack/my-plugins/start/nerdtree
+	url = https://github.com/preservim/nerdtree.git
+[submodule "vim/pack/my-plugins/start/vim-c-cpp-modern"]
+	path = vim/pack/my-plugins/start/vim-c-cpp-modern
+	url = git@github.com:bfrg/vim-c-cpp-modern.git
