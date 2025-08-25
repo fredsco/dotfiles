@@ -81,6 +81,9 @@ set relativenumber
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable syntax highlighting
 syntax enable
+set background=dark
+colorscheme solarized
+
 
 " Set regular expression engine automatically
 set regexpengine=0
