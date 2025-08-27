@@ -79,11 +79,15 @@ set relativenumber
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" For true color
+set termguicolors
+
 " Enable syntax highlighting
 syntax enable
-set background=dark
-colorscheme solarized
 
+set background=dark
+let g:gruvbox_contrast_dark='hard'
+colorscheme gruvbox
 
 " Set regular expression engine automatically
 set regexpengine=0
@@ -126,6 +130,9 @@ set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ 
 
 
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => True Color support
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
