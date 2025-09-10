@@ -157,32 +157,21 @@ set path+=**
 " Display all matching files when we tab complete
 set wildmenu
 
-" TAG JUMPING: 
-"
-" Create the `tags` file
-command! MakeTags !ctags -R .
 
-set tags+=~/pico/tags_pico
+let mapleader=","
 
-" NOW WE CAN: 
-" - Use ^] to jump to tag under cursor
-" - Use g^] for ambiguous tags
-" - Use ^t to jump back up the tag stack 
+" Sum custom maps
+nnoremap <leader>o <C-o>
+nnoremap <leader>i <C-i>
 
-" AUTOCOMPLETE:
-
-" The good stuff is documented in |ins-completion|
-
-" HIGHLIGHTS:
-" - ^x^n for JUST this file
-" - ^x^f for filenames (works with path)
-" - ^x^] for tags only
-" - ^n for anything specified by the 'complete' option
-" - We can use ^n and ^p to go back and forth in the suggestion list
-
-" FILE BROWSING: 
-
+" File browsing: 
 nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTreeToggle<CR>
-"nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
+
+" YCM
+nnoremap <leader>gl :YcmCompleter GoToDeclaration<CR>
+nnoremap <leader>gf :YcmCompleter GoToDefinition<CR>
+nnoremap <leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
+
