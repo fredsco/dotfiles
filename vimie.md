@@ -73,3 +73,13 @@
 * `:ls` → list all open buffers (files in memory)
 
 ---
+
+---
+
+### YouCompleteMe
+
+* `<leader>gl` →   go to declaration
+* `<leader>gf` →   go to definition
+* `<leader>gg` →   go to declaration else definition
+
+---
