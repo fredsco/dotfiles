@@ -81,15 +81,12 @@ set relativenumber
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" For true color
-set termguicolors
 
 " Enable syntax highlighting
 syntax enable
 
 set background=dark
-let g:gruvbox_contrast_dark='hard'
-colorscheme gruvbox
+colorscheme wildcharm
 
 " Set regular expression engine automatically
 set regexpengine=0
