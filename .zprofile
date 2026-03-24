@@ -40,6 +40,10 @@ PROMPT='%F{green}%*%f %F{blue}%~%f %F{red}${vcs_info_msg_0_}%f$ '
 alias l="ls --color" 
 alias ll="ls -al --color" 
 alias o="open ."
+alias cp="cp -i"                          # confirm before overwriting something
+alias df='df -h'                          # human-readable sizes
+alias free='free -m'                      # show sizes in MB
+alias ccat='highlight'                    # cat but nice
 
 # -------
 # 
