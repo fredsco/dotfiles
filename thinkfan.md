@@ -1,0 +1,96 @@
+# Thinkfan setup
+
+## 1. Install necessary programs 
+
+Install `lm-sensors` and `thinkfan`.
+
+````
+sudo apt-get install lm-sensors thinkfan
+````
+
+## 2. Enable the kernel option for fan control
+
+Linux Kernel includes a thinkpad_acpi module for supporting ThinkPad laptops. It supports fan control operations, but disabled by default due to safety reasons.
+
+1. To enable this fan control feature, open terminal (Ctrl+Alt+T) and run command to create a config file under /etc/modprobe.d/ directory:
+
+``sudo nano /etc/modprobe.d/thinkpad_acpi.conf``
+
+
+2. When file opens, simply add the line below:
+
+``options thinkpad_acpi fan_control=1``
+
+
+3. To apply the change, just run command below to remove the kernel module, then re-load it:
+
+``sudo modprobe -r thinkpad_acpi && sudo modprobe thinkpad_acpi``
+
+4. To verify, use command:
+
+``systool -v -m thinkpad_acpi``
+
+Run ``sudo apt install sysfsutils`` to install the tool if command not found. In the terminal output, the “fan_control” parameter equals to “Y” means the feature is enabled.
+
+## 3. Testing if fan can be set manually after kernel module option
+
+let's try to set fan speed manually:
+
+set the maximum regulated speed with level 7:
+
+``echo level 7 | sudo tee /proc/acpi/ibm/fan``
+
+The default is level auto, which can be set via command:
+
+``echo level auto | sudo tee /proc/acpi/ibm/fan``
+
+
+## 4. Setup configuration
+
+Find the temperature control devices with 
+
+````
+find /sys/devices -type f -name "temp*_input"
+````
+
+NOTE 2: After a reboot the input paths changed for me, however this happened only once.. make sure to test after a reboot (`thinkpad -n` or thinkfan UI)
+
+NOTE 3: sensors-detect solves this?
+
+
+Add them to `/etc/thinkfan.conf`, including (level, min_temperature, max_temperature):
+
+Note make sure to first add `tp_fan /proc/acpi/ibm/fan` on top:
+
+```
+tp_fan /proc/acpi/ibm/fan
+
+hwmon /sys/devices/platform/thinkpad_hwmon/hwmon/hwmon4/temp1_input
+
+(0,     0,      68)
+(1,     65,     75)
+(2,     73,     82)
+(3,     80,     88)
+(4,     85,     95)
+(7,     90,     32767)
+```
+
+## 5. Testing thinkfan
+
+To test thinkfan, use:
+
+```
+thinkfan -n
+```
+
+
+## 6. Running on startup
+
+ We need to enable the `thinkfan`, `thinkfan-sleep`, `thinkfan-wakeup` and  service via `systemctl`.
+
+```
+sudo systemctl enable thinkfan.service thinkfan-sleep.service thinkfan-wakeup.service
+```
+OPTIONAL: don't forget to change biasing factor otherwise fans switch pretty often. E.g `sudo thinkfan -b -10 -v -c /etc/thinkfan.conf`
+
+i.e: in `/etc/default/thinkfan` add `THINKFAN_ARGS="-b -10 -v -c /etc/thinkfan.conf"`
