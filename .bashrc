@@ -21,6 +21,7 @@ PROMPT_COMMAND='history -a'
 alias l="ls --color"
 alias ll="ls -al --color"
 alias o="open ."
+alias vim='vimx'
 alias nano='vim'
 alias cp="cp -i"                          # confirm before overwriting something
 alias df='df -h'                          # human-readable sizes
@@ -44,3 +45,6 @@ export PS1="\n\t \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
 # Exports
 export PICO_SDK_PATH=~/pico/pico-sdk
 export PICO_EXTRAS_PATH=~/pico/pico-extras
+export PATH=$(go env GOPATH)/bin:$PATH
+export PATH=~/.npm-global/bin:$PATH
+
